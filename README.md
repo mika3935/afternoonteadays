@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # **afternoonteadays**　**(アフタヌーンティーデイズ)**
 
 <img width="1200" height="1200" alt="afternoonteadays-logo" src="https://github.com/user-attachments/assets/014c05be-6d20-4784-a7cc-3c749cf6903a" />
@@ -74,3 +75,29 @@
 - OS：Windows 11 + Git Bash  
 - 言語：HTML、CSS、JavaScript、Ruby  
 - フレームワーク：Ruby on Rails
+=======
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+>>>>>>> a995812 (試行錯誤)
