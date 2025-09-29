@@ -1,21 +1,21 @@
 source "https://rubygems.org"
 
-ruby "3.2.9"
+ruby '3.2.8'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.5", ">= 7.1.5.2"
+gem "rails", "7.1.5.2"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 1.4"
+gem "sqlite3", "~> 1.4", platforms: [:windows]
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
+gem "importmap-rails", "~> 1.2.3"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -46,7 +46,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ]
+ # gem 'debug' gem "debug", platforms: %i[ mri windows ]
 end
 
 group :development do
@@ -55,7 +55,9 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-
+# gem "refile", github: "manfe/refile"
+# gem "refile-mini_magick"
+# gem "mini_magick"
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
@@ -64,4 +66,18 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+end
+
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+
+gem 'nokogiri', '~> 1.13', '>= 1.13.3'
+
+gem "railties", "7.1.5.2"
+
+
+gem 'bindex', '~> 0.8.1'
+# Gemfile
+# gem 'debug'
+group :development, :test do
+  # gem "debug", platforms: %i[mri windows]
 end
