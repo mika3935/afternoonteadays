@@ -1,0 +1,20 @@
+current directory: C:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/erb-5.0.2/ext/erb/escape
+C:/Ruby32-x64/bin/ruby.exe extconf.rb
+checking for rb_ext_ractor_safe() in ruby.h... yes
+creating Makefile
+
+current directory: C:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20251005-4812-adcnru sitelibdir\=./.gem.20251005-4812-adcnru clean
+
+current directory: C:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20251005-4812-adcnru sitelibdir\=./.gem.20251005-4812-adcnru
+generating escape-x64-mingw-ucrt.def
+compiling escape.c
+linking shared-object erb/escape.so
+
+current directory: C:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20251005-4812-adcnru sitelibdir\=./.gem.20251005-4812-adcnru install
+/usr/bin/install -c -m 0755 escape.so ./.gem.20251005-4812-adcnru/erb
+
+current directory: C:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20251005-4812-adcnru sitelibdir\=./.gem.20251005-4812-adcnru clean

@@ -1,0 +1,86 @@
+find_header: checking for prism.h in C:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/prism-1.4.0/include... -------------------- yes
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Users\caa-5\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\caa-5\bin;C:\Program Files\ImageMagick-7.1.2-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared;C:\Program Files (x86)\Roxio 2010\OEM\AudioCore;C:\Program Files\Git\cmd;C:\Ruby31-x64\bin;C:\Program Files\nodejs;C:\Ruby32-x64\bin;C:\Users\caa-5\AppData\Local\Microsoft\WindowsApps;C:\Users\caa-5\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\ImageMagick-7.1.2-2-Q16;C:\Program Files\ImageMagick-7.1.2.2-Q16-HDRI;C:\Users\caa-5\.local\share\gem\ruby\3.2.0\bin;C:\Users\caa-5\AppData\Roaming\npm;C:\Users\caa-5\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\caa-5\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl" "gcc -o conftest.exe -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -LC:/Ruby32-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed  -m64   -lx64-ucrt-ruby320  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Users\caa-5\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\caa-5\bin;C:\Program Files\ImageMagick-7.1.2-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared;C:\Program Files (x86)\Roxio 2010\OEM\AudioCore;C:\Program Files\Git\cmd;C:\Ruby31-x64\bin;C:\Program Files\nodejs;C:\Ruby32-x64\bin;C:\Users\caa-5\AppData\Local\Microsoft\WindowsApps;C:\Users\caa-5\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\ImageMagick-7.1.2-2-Q16;C:\Program Files\ImageMagick-7.1.2.2-Q16-HDRI;C:\Users\caa-5\.local\share\gem\ruby\3.2.0\bin;C:\Users\caa-5\AppData\Roaming\npm;C:\Users\caa-5\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\caa-5\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+conftest.c:5:10: fatal error: prism.h: No such file or directory
+    5 | #include <prism.h>
+      |          ^~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <prism.h>
+/* end */
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Users\caa-5\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\caa-5\bin;C:\Program Files\ImageMagick-7.1.2-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared;C:\Program Files (x86)\Roxio 2010\OEM\AudioCore;C:\Program Files\Git\cmd;C:\Ruby31-x64\bin;C:\Program Files\nodejs;C:\Ruby32-x64\bin;C:\Users\caa-5\AppData\Local\Microsoft\WindowsApps;C:\Users\caa-5\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\ImageMagick-7.1.2-2-Q16;C:\Program Files\ImageMagick-7.1.2.2-Q16-HDRI;C:\Users\caa-5\.local\share\gem\ruby\3.2.0\bin;C:\Users\caa-5\AppData\Roaming\npm;C:\Users\caa-5\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\caa-5\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -m64 -IC:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/prism-1.4.0/include -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <prism.h>
+/* end */
+
+--------------------
+
+find_header: checking for prism/extension.h in C:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/prism-1.4.0/ext... -------------------- yes
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Users\caa-5\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\caa-5\bin;C:\Program Files\ImageMagick-7.1.2-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared;C:\Program Files (x86)\Roxio 2010\OEM\AudioCore;C:\Program Files\Git\cmd;C:\Ruby31-x64\bin;C:\Program Files\nodejs;C:\Ruby32-x64\bin;C:\Users\caa-5\AppData\Local\Microsoft\WindowsApps;C:\Users\caa-5\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\ImageMagick-7.1.2-2-Q16;C:\Program Files\ImageMagick-7.1.2.2-Q16-HDRI;C:\Users\caa-5\.local\share\gem\ruby\3.2.0\bin;C:\Users\caa-5\AppData\Roaming\npm;C:\Users\caa-5\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\caa-5\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I. -IC:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/prism-1.4.0/include  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -m64  -c conftest.c"
+conftest.c:5:10: fatal error: prism/extension.h: No such file or directory
+    5 | #include <prism/extension.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <prism/extension.h>
+/* end */
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Users\caa-5\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\caa-5\bin;C:\Program Files\ImageMagick-7.1.2-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared;C:\Program Files (x86)\Roxio 2010\OEM\AudioCore;C:\Program Files\Git\cmd;C:\Ruby31-x64\bin;C:\Program Files\nodejs;C:\Ruby32-x64\bin;C:\Users\caa-5\AppData\Local\Microsoft\WindowsApps;C:\Users\caa-5\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\ImageMagick-7.1.2-2-Q16;C:\Program Files\ImageMagick-7.1.2.2-Q16-HDRI;C:\Users\caa-5\.local\share\gem\ruby\3.2.0\bin;C:\Users\caa-5\AppData\Roaming\npm;C:\Users\caa-5\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\caa-5\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I. -IC:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/prism-1.4.0/include  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -m64 -IC:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/prism-1.4.0/ext -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <prism/extension.h>
+/* end */
+
+--------------------
+
+block in append_cflags: checking for whether -fvisibility=hidden is accepted as CFLAGS... -------------------- yes
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Users\caa-5\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\caa-5\bin;C:\Program Files\ImageMagick-7.1.2-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared;C:\Program Files (x86)\Roxio 2010\OEM\AudioCore;C:\Program Files\Git\cmd;C:\Ruby31-x64\bin;C:\Program Files\nodejs;C:\Ruby32-x64\bin;C:\Users\caa-5\AppData\Local\Microsoft\WindowsApps;C:\Users\caa-5\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\ImageMagick-7.1.2-2-Q16;C:\Program Files\ImageMagick-7.1.2.2-Q16-HDRI;C:\Users\caa-5\.local\share\gem\ruby\3.2.0\bin;C:\Users\caa-5\AppData\Roaming\npm;C:\Users\caa-5\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\caa-5\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I. -IC:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/prism-1.4.0/include -IC:/Users/caa-5/Desktop/afternoonteadays/vendor/bundle/ruby/3.2.0/gems/prism-1.4.0/ext  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -m64 -fvisibility=hidden -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+
