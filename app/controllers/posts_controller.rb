@@ -5,19 +5,23 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
     if @post.save
-      redirect_to posts_path
+      redirect_to posts_path(@post.id)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.page(params[:page]).reverse_order  #この行を記述
+    @posts = @posts.where('location LIKE ?', "%#{params[:search]}%") if params[:search].present?
   end
 
   def show
     @post = Post.find(params[:id])
+     @comment = Comment.new
+     @comments = @post.comments.page(params[:page]).per(7).reverse_order
   end
 
   def edit
@@ -25,23 +29,27 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
-    if @post.update(post_params)
-      redirect_to post_path(@post)
-    else
-      render :edit
+  @post = Post.find(params[:id])
+  if @post.update(post_params)
+    redirect_to post_path(@post.id)
+  else
+    render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
-    post = Post.find(params[:id])
+  post = Post.find(params[:id])
+  begin
     post.destroy
-    redirect_to posts_path
+  rescue Errno::EACCES
+    # Windows の権限エラーを無視
+    puts "ファイル削除できませんでしたが、投稿は削除されます"
   end
-
+  redirect_to posts_path
+end
   private
 
   def post_params
-    params.require(:post).permit(:location, :text, :image)
+    params.require(:post).permit(:user_id, :location, :text, :image)
   end
 end

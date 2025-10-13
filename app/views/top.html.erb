@@ -1,1 +1,32 @@
-<h1>Topページ</h1>
+<h1>投稿一覧</h1>
+
+<%= link_to '新規投稿', new_post_path, class: 'btn btn-primary' %>
+
+<table>
+  <thead>
+    <tr>
+      <th>店名</th>
+      <th>感想</th>
+      <th>画像</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.location %></td>
+        <td><%= post.text %></td>
+        <td>
+          <% if post.image.present? %>
+            <%= attachment_image_tag post, :image, size: "100x100" %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to '編集', edit_post_path(post), class: 'btn btn-warning' %>
+          <%= link_to '削除', post_path(post), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" }, class: 'btn btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
