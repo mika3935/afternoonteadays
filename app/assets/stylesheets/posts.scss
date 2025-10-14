@@ -42,13 +42,30 @@ h1 {
   margin-left: 2.5rem!important;
 }
 
+/* 投稿詳細ページの背景 */
 .cover-show {
-  height: 150%;
-  width: 100%;
   background-image: url(/assets/show.webp);
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
-  background-size: 100% 100%;
+  background-size: cover;          /* 縦横いっぱいにフィット */
+  background-position: top center; /* 上端を基準に表示 */
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 0 80px 50px 80px;      /* 上は0、下だけ余白 */
+  text-align: left;
+}
+
+/* html, body の余白リセット */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* .cover-show 内の container や row の余白をリセット */
+.cover-show .container,
+.cover-show .row {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 #text {
@@ -115,4 +132,11 @@ h1 {
 
 .favorite_btn {
   color: #000;
+}
+
+.post-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }

@@ -24,6 +24,8 @@ class User < ApplicationRecord
     follower.find_by(followed_id: user_id).destroy
   end
 
+  validates :name, presence: true
+  
   # フォローしていればtrueを返す
   def following?(user)
     following_user.include?(user)
