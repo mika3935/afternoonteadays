@@ -61,3 +61,5 @@ gem "sassc-rails"
 gem 'kaminari'
 
 gem 'devise-i18n'
+
+gem 'enum_help'

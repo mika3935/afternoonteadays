@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
+   before_action :authenticate_user!
+
   # ユーザー認証
-  before_action :authenticate_user!,except: [:top]
+  
   
   # Devise のパラメータ許可設定
   before_action :configure_permitted_parameters, if: :devise_controller?

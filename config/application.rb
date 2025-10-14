@@ -10,6 +10,7 @@ module Afternoonteadays
   class Application < Rails::Application
     # Rails 7.2 の設定を使う
     config.load_defaults 7.1
+    config.i18n.default_locale = :ja 
 
     # lib配下の自動読み込み設定
     config.autoload_lib(ignore: %w(assets tasks))
