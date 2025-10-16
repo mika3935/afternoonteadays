@@ -11,8 +11,7 @@
     <%= favicon_link_tag('favicon.ico') %>
   </head>
 
-  <body>
-    <% if user_signed_in? %>
+  <% if user_signed_in? %>
       <header class="d-flex align-items-center justify-content-start bg-dark p-2">
         <!-- ロゴ＋サイト名 -->
         <div class="d-flex align-items-center mr-4">
