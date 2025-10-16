@@ -20,8 +20,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-     @comment = Comment.new
-     @comments = @post.comments.page(params[:page]).per(7).reverse_order
+    @comment = Comment.new
+    @comments = @post.comments.page(params[:page]).per(7).reverse_order
   end
 
   def edit
@@ -29,28 +29,39 @@ class PostsController < ApplicationController
   end
 
   def update
-  @post = Post.find(params[:id])
-  if @post.update(post_params)
-    redirect_to post_path(@post.id)
-  else
-    render :edit, status: :unprocessable_entity
+    @post = Post.find(params[:id])
+
+    # 画像が空なら image を除外
+    if params[:post][:image].blank?
+      if @post.update(post_params.except(:image))
+        redirect_to post_path(@post.id)
+      else
+        render :edit, status: :unprocessable_entity
+      end
+    else
+      if @post.update(post_params)
+        redirect_to post_path(@post.id)
+      else
+        render :edit, status: :unprocessable_entity
+      end
     end
-  end
+  end  # ←✅ ここを追加！
 
   def confirm
-  @posts = current_user.posts.draft.page(params[:page]).reverse_order
-end
+    @posts = current_user.posts.draft.page(params[:page]).reverse_order
+  end
 
   def destroy
-  post = Post.find(params[:id])
-  begin
-    post.destroy
-  rescue Errno::EACCES
-    # Windows の権限エラーを無視
-    puts "ファイル削除できませんでしたが、投稿は削除されます"
+    post = Post.find(params[:id])
+    begin
+      post.destroy
+    rescue Errno::EACCES
+      # Windows の権限エラーを無視
+      puts "ファイル削除できませんでしたが、投稿は削除されます"
+    end
+    redirect_to posts_path
   end
-  redirect_to posts_path
-end
+
   private
 
   def post_params
