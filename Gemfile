@@ -9,7 +9,7 @@ gem "rails", "~> 7.1.5", ">= 7.1.5.2"
 gem "sprockets-rails"
 
 # SQLite3 データベース
-gem "sqlite3", "~> 1.6.9"
+# gem "sqlite3", "~> 1.6.9"
 
 # Webサーバー
 gem "puma", ">= 5.0"
@@ -23,7 +23,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Windows 環境向け設定
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ] 
 
 # 高速化
 gem "bootsnap", require: false
@@ -41,11 +41,17 @@ gem "ffi"
 gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  gem "debug", platforms: %i[mri windows]
+ # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'sqlite3', '~> 1.4'
+  gem "debug", platforms: %i[ mri mingw ]   
 end
 
 group :development do
   gem "web-console"
+end
+
+group :production do
+  gem "pg"
 end
 
 group :test do

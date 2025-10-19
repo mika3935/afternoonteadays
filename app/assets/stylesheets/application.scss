@@ -74,3 +74,42 @@ a:hover {
   border-radius: 50%;
 }
 
+/* ------------------------------
+   📱 レスポンシブ対応（スマホ用）
+   ------------------------------ */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* 横並びを縦並びに変更 */
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  header div {
+    margin: 5px 0;
+    font-size: 16px; /* 文字を少し小さく */
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  header div:first-child {
+    margin-right: 0;
+  }
+
+  header div:last-child {
+    margin-right: 0;
+  }
+}
+
+/* さらに小さいスマホ対応（iPhone SEなど） */
+@media (max-width: 480px) {
+  header div {
+    font-size: 14px;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 5px;
+  }
+}

@@ -3,26 +3,26 @@ h1 {
   }
   
   .cover-new {
-    height: 200%;
-    width: 100%;
-    background-image: url(/assets/new-posts.webp);
-    background-color: rgba(255, 255, 255, 0.4);
-    background-blend-mode: lighten;
-    background-size: 100% 100%;
-  }
-  
-  .form-label {
-    font-size: 20px;
-  }
-  
-  .form-group {
-    width: 600px;
-  }
-
-  .cover-index {
-  height: 150%;
+  height: 200%;
   width: 100%;
-  background-image: url(/assets/index.webp);
+  background-image: image-url('new-posts.webp');
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  background-size: 100% 100%;
+}
+
+.form-label {
+  font-size: 20px;
+}
+
+.form-group {
+  width: 600px;
+}
+
+.cover-index {
+  height: 180%; /* 150%から180%に統一 */
+  width: 100%;
+  background-image: image-url('coverindex.png');
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
   background-size: 100% 100%;
@@ -44,14 +44,14 @@ h1 {
 
 /* 投稿詳細ページの背景 */
 .cover-show {
-  background-image: url(/assets/show.webp);
+  background-image: image-url('show.webp');
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
-  background-size: cover;          /* 縦横いっぱいにフィット */
-  background-position: top center; /* 上端を基準に表示 */
+  background-size: cover;
+  background-position: top center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  padding: 0 80px 50px 80px;      /* 上は0、下だけ余白 */
+  padding: 0 80px 50px 80px;
   text-align: left;
 }
 
@@ -75,22 +75,13 @@ html, body {
 .cover-edit {
   height: 120%;
   width: 100%;
-  background-image: url(/assets/edit.jpg);
+  background-image: image-url('edit.jpg');
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
   background-size: 100% 100%;
 }
 
-.cover-index {
-  height: 180%;
-  width: 100%;
-  background-image: url(/assets/coverindex.png); /* 画像ファイル名 */
-  background-color: rgba(255, 255, 255, 0.4);
-  background-blend-mode: lighten;
-  background-size: 100% 100%;
-}
-  
-
+/* ページネーション */
 .page a,
 .next a,
 .last a,
@@ -113,6 +104,7 @@ html, body {
   font-weight: bold;
 }
 
+/* コメント */
 .comments-index {
   background-color: #fff;
   border: 1px #000 solid;
@@ -139,4 +131,88 @@ html, body {
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+
+/* ------------------------------
+   📱 レスポンシブ対応
+   ------------------------------ */
+
+/* タブレット対応 */
+@media (max-width: 1024px) {
+  .form-group {
+    width: 80%;
+  }
+
+  .caption {
+    font-size: 18px;
+  }
+
+  .cover-show {
+    padding: 0 40px 40px 40px;
+  }
+
+  header div {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* スマホ対応（縦画面） */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header div {
+    margin: 10px 0;
+  }
+
+  .form-group {
+    width: 90%;
+  }
+
+  .caption {
+    font-size: 16px;
+  }
+
+  .post-subtitle {
+    font-size: 18px;
+  }
+
+  .cover-index,
+  .cover-new,
+  .cover-edit,
+  .cover-show {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .comments {
+    margin-left: 20px;
+  }
+}
+
+/* スマホ小画面対応（iPhone SEなど） */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .form-label {
+    font-size: 16px;
+  }
+
+  .caption {
+    font-size: 14px;
+  }
+
+  .post-subtitle {
+    font-size: 16px;
+  }
+
+  header div {
+    font-size: 18px;
+  }
 }
