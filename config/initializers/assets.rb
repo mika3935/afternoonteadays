@@ -7,3 +7,5 @@ Rails.application.config.assets.paths << Rails.root.join("app", "assets", "image
 
 # JSのプリコンパイル
 Rails.application.config.assets.precompile += %w( bootstrap.min.js popper.js )
+
+Rails.application.config.assets.precompile += %w( application.js )
