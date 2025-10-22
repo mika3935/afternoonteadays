@@ -5,7 +5,7 @@
   height: 100vh;
   width: 100%;
   display: table;
-  background-image: image-url('top-scaled.webp'); /* プリコンパイル対応 */
+  background-image: image-url('top-scaled.webp'); 
   background-size: cover;
   background-position: center;
   position: relative;
@@ -18,7 +18,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 192, 203, 0.3); /* 淡いピンクオーバーレイ */
+  background: rgba(255, 192, 203, 0.3); 
   z-index: 0;
 }
 
@@ -34,7 +34,7 @@
    タイトル
 ------------------------------ */
 .title {
-  font-family: 'Pacifico', cursive; /* 手書き風フォント */
+  font-family: 'Pacifico', cursive; 
   font-size: 48px;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -81,26 +81,24 @@
   cursor: pointer;
 }
 
-/* ボタン間スペース */
+
 .btn-group .mr-2 { margin-right: 10px; }
 .btn-group .ml-2 { margin-left: 10px; }
 
-/* ------------------------------
-   レスポンシブ対応
------------------------------- */
 
-/* タブレット対応 */
+
+
 @media (max-width: 1024px) {
   .title { font-size: 40px; }
   .sub-title { font-size: 18px; }
   .btn { padding: 8px 16px; font-size: 14px; }
 }
 
-/* スマホ縦画面対応 */
+
 @media (max-width: 768px) {
   .cover {
     background-position: center top;
-    background-attachment: scroll; /* モバイルで背景固定を防ぐ */
+    background-attachment: scroll; 
   }
   .title { font-size: 32px; }
   .sub-title { font-size: 16px; }
@@ -112,7 +110,7 @@
   }
 }
 
-/* スマホ小画面対応 */
+
 @media (max-width: 480px) {
   .title { font-size: 26px; line-height: 1.3; }
   .sub-title { font-size: 14px; }
