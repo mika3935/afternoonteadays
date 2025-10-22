@@ -1,11 +1,8 @@
- /* ------------------------------
-   背景・中央配置（トップページカバー）
------------------------------- */
 .cover {
   height: 100vh;
   width: 100%;
   display: table;
-  background-image: image-url('top-scaled.webp'); 
+  background-image: url(<%= asset_path 'top-scaled.webp' %>); 
   background-size: cover;
   background-position: center;
   position: relative;
@@ -30,9 +27,7 @@
   z-index: 1;
 }
 
-/* ------------------------------
-   タイトル
------------------------------- */
+
 .title {
   font-family: 'Pacifico', cursive; 
   font-size: 48px;
@@ -49,9 +44,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-/* ------------------------------
-   ボタン
------------------------------- */
+
 .btn {
   border-radius: 20px;
   padding: 10px 20px;
@@ -86,14 +79,11 @@
 .btn-group .ml-2 { margin-left: 10px; }
 
 
-
-
 @media (max-width: 1024px) {
   .title { font-size: 40px; }
   .sub-title { font-size: 18px; }
   .btn { padding: 8px 16px; font-size: 14px; }
 }
-
 
 @media (max-width: 768px) {
   .cover {
@@ -109,7 +99,6 @@
     font-size: 14px;
   }
 }
-
 
 @media (max-width: 480px) {
   .title { font-size: 26px; line-height: 1.3; }
