@@ -35,9 +35,11 @@
         <div><%= link_to "ユーザ一覧", users_path, class: "text-white nav-link" %></div>
         <div><%= link_to "マイページ", user_path(current_user.id), class: "text-white nav-link" %></div>
         <div>
-        <%= button_to "ログアウト", destroy_user_session_path,
-          method: :delete,
-          class: "btn btn-link text-white p-0" %>
+        <%= link_to "ログアウト", destroy_user_session_path,
+      method: :delete,
+      data: { turbo: false },
+      class: "text-white nav-link" %>
+
     <% end %>
 
     <%= yield %>
