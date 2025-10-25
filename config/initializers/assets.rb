@@ -1,9 +1,7 @@
 # Be sure to restart your server when you modify this file.
 Rails.application.config.assets.version = "1.0"
 
-# 画像パスを追加
+# 画像ディレクトリを追加
 Rails.application.config.assets.paths << Rails.root.join("app", "assets", "images")
 
-# JSはImportmapで管理するのでプリコンパイル設定不要
-# Rails.application.config.assets.precompile += %w( application.js )
-# Rails.application.config.assets.precompile += %w( bootstrap.min.js popper.js )
+Rails.application.config.assets.precompile += %w( application.js )
