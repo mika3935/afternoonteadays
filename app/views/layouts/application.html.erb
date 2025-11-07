@@ -35,11 +35,12 @@
         <div><%= link_to "ユーザ一覧", users_path, class: "text-white nav-link" %></div>
         <div><%= link_to "マイページ", user_path(current_user.id), class: "text-white nav-link" %></div>
 
-        <!-- Turbo 対応ログアウトリンク -->
+        <!-- ✅ Turboを無効にして、確実にログアウト -->
         <div>
-          <%= link_to "ログアウト", destroy_user_session_path,
-                data: { turbo_method: :delete },
-                class: "text-white nav-link" %>
+          <%= button_to "ログアウト", destroy_user_session_path,
+                method: :delete,
+                data: { turbo: false },
+                class: "btn btn-link text-white nav-link p-0" %>
         </div>
       </header>
     <% end %>
