@@ -14,9 +14,10 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.published.page(params[:page]).reverse_order
-    @posts = @posts.where('location LIKE ?', "%#{params[:search]}%") if params[:search].present?
-  end
+  @posts = Post.all.page(params[:page]).reverse_order
+  @posts = @posts.where('location LIKE ?', "%#{params[:search]}%") if params[:search].present?
+end
+
 
   def show
     @post = Post.find(params[:id])
