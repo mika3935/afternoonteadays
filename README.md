@@ -1,4 +1,4 @@
-# **afternoonteadays**　**(アフタヌーンティーデイズ)**
+# **AFTERNOONTEADAYS**　**(アフタヌーンティーデイズ)**
 
 <img width="1200" height="1200" alt="afternoonteadays-logo" src="https://github.com/user-attachments/assets/014c05be-6d20-4784-a7cc-3c749cf6903a" />
 
