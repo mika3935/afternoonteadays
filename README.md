@@ -51,9 +51,10 @@
 - **お店に行った後**：訪れたお店の感想やメニューを記録し、他のユーザーと共有。ほかのお店を調べるとき  
 
 ### 利用方法
-1. ユーザー新規登録またはログインを行う<img width="1262" height="674" alt="スクリーンショット 2025-11-14 新規登録" src="https://github.com/user-attachments/assets/cd78fc0c-c1ba-42e4-b8c9-8bbbb4cbb3ef<img width="1231" height="674" alt="スクリーンショット 2025-11-14 ログイン" src="https://github.com/user-attachments/assets/887b460b-3028-4c5c-9dcc-f49dd5c804e8" />
-" />
+1. ユーザー新規登録またはログインを行う<img width="1262" height="674" alt="スクリーンショット 2025-11-14 新規登録" src="https://github.com/user-attachments/assets/c3c61206-0e31-4ff7-861a-535eba184bed" /><img width="1231" height="674" alt="スクリーンショット 2025-11-14 ログイン" src="https://github.com/user-attachments/assets/b1c9271c-5279-4525-893b-cbb6ff6af027" />
+
 2. 行ったお店・メニューを写真や感想とともに投稿<img width="1235" height="666" alt="スクリーンショット 2025-11-15 新規投稿" src="https://github.com/user-attachments/assets/acf05e6c-6a3e-42c8-9a65-fc6a01789e6c" />
+
 3. 他のユーザーの投稿を閲覧し、気に入った投稿に「いいね」や「コメント」を残す<img width="1219" height="662" alt="スクリーンショット 2025-11-15 投稿詳細" src="https://github.com/user-attachments/assets/2662b0cd-1f1a-4115-b843-475a254fde19" />
 
 ### 機能一覧
