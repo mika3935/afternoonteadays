@@ -69,3 +69,5 @@ gem 'kaminari'
 gem 'devise-i18n'
 
 gem 'enum_help'
+
+gem 'dotenv-rails', groups: [:development, :test]
