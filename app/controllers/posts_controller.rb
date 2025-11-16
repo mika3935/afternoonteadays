@@ -4,14 +4,15 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.user_id = current_user.id
-    if @post.save
-      redirect_to posts_path(@post.id)
-    else
-      render :new, status: :unprocessable_entity
-    end
+  @post = Post.new(post_params)
+  @post.user_id = current_user.id
+  if @post.save
+    redirect_to @post   
+  else
+    render :new, status: :unprocessable_entity
   end
+end
+
 
   def index
   @posts = Post.all.page(params[:page]).reverse_order
