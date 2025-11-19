@@ -56,7 +56,8 @@
 
 2. 行ったお店・メニューを写真や感想とともに投稿<img width="1235" height="666" alt="スクリーンショット 2025-11-15 新規投稿" src="https://github.com/user-attachments/assets/acf05e6c-6a3e-42c8-9a65-fc6a01789e6c" />
 
-3. 他のユーザーの投稿を閲覧し、気に入った投稿に「いいね」や「コメント」を残す<img width="1062" height="570" alt="スクリーンショット 2025-11-20 投稿一覧" src="https://github.com/user-attachments/assets/373e56cc-ef62-4315-9dae-a543b11bff18" /><img width="924" height="621" alt="スクリーンショット 2025-11-20 投稿詳細" src="https://github.com/user-attachments/assets/c71d0739-63dc-4b18-8e79-d7837459ce3d" />
+3. 他のユーザーの投稿を閲覧し、気に入った投稿に「いいね」や「コメント」を残す<img width="1062" height="570" alt="スクリーンショット 2025-11-20 投稿一覧" src="https://github.com/user-attachments/assets/e9c60b3e-abb0-431d-83a3-52ea5917b680" /><img width="924" height="621" alt="スクリーンショット 2025-11-20 投稿詳細" src="https://github.com/user-attachments/assets/030addb8-8d72-4978-8198-9f8c5277f2b7" />
+
 
 
 
