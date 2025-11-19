@@ -51,11 +51,14 @@
 - **お店に行った後**：訪れたお店の感想やメニューを記録し、他のユーザーと共有。ほかのお店を調べるとき  
 
 ### 利用方法
-1. ユーザー新規登録またはログインを行う<img width="1262" height="674" alt="スクリーンショット 2025-11-14 新規登録" src="https://github.com/user-attachments/assets/c3c61206-0e31-4ff7-861a-535eba184bed" /><img width="1231" height="674" alt="スクリーンショット 2025-11-14 ログイン" src="https://github.com/user-attachments/assets/b1c9271c-5279-4525-893b-cbb6ff6af027" />
+1. ユーザー新規登録またはログインを行う<img width="890" height="606" alt="スクリーンショット 2025-11-20  新規登録" src="https://github.com/user-attachments/assets/fa7be3b5-4b03-49fb-bb7e-afa70be696ca" /><img width="999" height="608" alt="スクリーンショット 2025-11-20 ログイン" src="https://github.com/user-attachments/assets/c9a57754-c97d-4cdc-b85a-7008606fb7d2" />
+
 
 2. 行ったお店・メニューを写真や感想とともに投稿<img width="1235" height="666" alt="スクリーンショット 2025-11-15 新規投稿" src="https://github.com/user-attachments/assets/acf05e6c-6a3e-42c8-9a65-fc6a01789e6c" />
 
-3. 他のユーザーの投稿を閲覧し、気に入った投稿に「いいね」や「コメント」を残す<img width="1219" height="662" alt="スクリーンショット 2025-11-15 投稿詳細" src="https://github.com/user-attachments/assets/2662b0cd-1f1a-4115-b843-475a254fde19" /><img width="1231" height="675" alt="スクリーンショット 2025-11-16 投稿一覧" src="https://github.com/user-attachments/assets/329909ea-b648-4cc6-ba79-36edd29e58c1" />
+3. 他のユーザーの投稿を閲覧し、気に入った投稿に「いいね」や「コメント」を残す<img width="1062" height="570" alt="スクリーンショット 2025-11-20 投稿一覧" src="https://github.com/user-attachments/assets/373e56cc-ef62-4315-9dae-a543b11bff18" /><img width="924" height="621" alt="スクリーンショット 2025-11-20 投稿詳細" src="https://github.com/user-attachments/assets/c71d0739-63dc-4b18-8e79-d7837459ce3d" />
+
+
 
 
 ### 機能一覧
