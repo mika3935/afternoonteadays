@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-    @posts = @user.posts.page(params[:page]).per(8).reverse_order
+    @posts = @user.posts.page(params[:page]).per(6).reverse_order # 最大6件表示
     @following_users = @user.following_user
     @follower_users = @user.follower_user
   end

@@ -25,6 +25,29 @@
 }
 
 /* ------------------------------
+   マイページ背景（高さを長く）
+   ------------------------------ */
+.cover-user-show {
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* ------------------------------
+   新規投稿画面の背景画像
+   ------------------------------ */
+.cover-new {
+  width: 100%;
+  min-height: 100vh;
+  background-image: image-url('coverindex.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255,255,255,0.3);
+  background-blend-mode: lighten;
+  padding: 20px 0;
+}
+
+/* ------------------------------
    投稿一覧カード
    ------------------------------ */
 .post-card {
@@ -167,6 +190,24 @@
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+/* ------------------------------
+   タイトル名のデザイン
+   ------------------------------ */
+.page-title, .font-weight-normal {
+  font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', 'Arial', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #d16ba5;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(209,107,165,0.08);
+  background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 18px;
+  text-align: center;
 }
 
 /* レスポンシブ */
