@@ -55,5 +55,5 @@ Rails.application.configure do
   config.action_controller.forgery_protection_origin_check = true
 
   # Renderのホスト名を許可（セキュリティのため必要）
-  config.hosts << "afternoonteadays.onrender.com"
+  config.hosts << "afternoonteadays-new.onrender.com"
 end

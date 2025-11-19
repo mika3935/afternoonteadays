@@ -216,3 +216,40 @@ html, body {
     font-size: 18px;
   }
 }
+
+/* 投稿一覧全体 */
+.index-left {
+  justify-content: center;
+}
+
+/* 投稿カード */
+.one-post {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* ホバー時のふわっと */
+.one-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* 画像のスタイル */
+.one-post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;  /* トリミングして綺麗に表示 */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* テキスト調整 */
+.caption {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}

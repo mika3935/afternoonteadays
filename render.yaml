@@ -1,7 +1,7 @@
 databases:
   - name: afternoonteadaysdays
-    databaseName: afternoonteadaysdays
-    user: afternoonteadaysdays_user
+    databaseName: afternoonteadaysdays_vp89
+    user: afternoonteadaysdays_vp89_user
     region: Oregon
 
 services:
