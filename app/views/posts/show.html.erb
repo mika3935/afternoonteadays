@@ -20,7 +20,7 @@
       <!-- 画像 -->
       <% if @post.image.present? %>
         <div class="mb-4">
-          <%= attachment_image_tag @post, :image, format: 'jpeg', class: "img-fluid rounded shadow" %>
+          <%= attachment_image_tag @post, :image, format: 'jpeg', size: "300x300", class: "post-image rounded shadow", alt: (@post.try(:title) || @post.location || 'post image') %>
         </div>
       <% end %>
 

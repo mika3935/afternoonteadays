@@ -14,22 +14,23 @@
  *= require_self
  */
 @import "bootstrap";
-// application.scss
 @import "homes";
+@import "posts";
+@import "auth";
 
- html,
- body {
-   width: 100%;
-   height: 100%;
-   margin: 0;
-   padding: 0;
- }
- 
- .profiler-results {
-   display: none;
- }
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
- header {
+.profiler-results {
+  display: none;
+}
+
+header {
   display: flex;
   background-color: black;
 }
@@ -48,25 +49,12 @@ header div {
   line-height: 30px;
 }
 
-a:hover {
-  color: aqua!important;
-}
-
-#head-top {
-  text-decoration: none;
-  font-size: 25px;
-}
-
-.nav-link {
-  text-decoration: none;
-}
-
 a {
   text-decoration: none;
 }
 
 a:hover {
-  color: aqua!important;
+  color: aqua !important;
   text-decoration: underline;
 }
 
@@ -79,30 +67,26 @@ a:hover {
    ------------------------------ */
 @media (max-width: 768px) {
   header {
-    flex-direction: column; /* 横並びを縦並びに変更 */
+    flex-direction: column;
     align-items: center;
     padding: 10px 0;
   }
 
   header div {
     margin: 5px 0;
-    font-size: 16px; /* 文字を少し小さく */
+    font-size: 16px;
   }
 
   .nav-link {
     font-size: 14px;
   }
 
-  header div:first-child {
-    margin-right: 0;
-  }
-
+  header div:first-child,
   header div:last-child {
     margin-right: 0;
   }
 }
 
-/* さらに小さいスマホ対応（iPhone SEなど） */
 @media (max-width: 480px) {
   header div {
     font-size: 14px;
@@ -113,3 +97,98 @@ a:hover {
     padding: 5px;
   }
 }
+
+/* 投稿詳細ページ */
+.cover-show h4,
+.cover-show h5 {
+  font-weight: bold;
+}
+
+#text {
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   🖼 投稿詳細の画像調整（完全版）
+   ------------------------------ */
+
+/* 投稿詳細ページの画像調整 */
+.post-image {
+  width: 300px;       /* デスクトップでより大きく表示 */
+  height: 300px;      /* 縦も横も同じサイズに揃える */
+  object-fit: contain; /* 画像のアスペクト比を保ったまま収める */
+  display: block;
+  margin: 0 auto;     /* 中央寄せ */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* スマホでは幅いっぱいに */
+@media (max-width: 768px) {
+  .post-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* DEBUG: 一時的にポストカードのアウトラインを表示してスタイル読み込みを確認する */
+/* debug styles removed */
+
+/* ------------------------------
+   ⚠️ 最終オーバーライド（競合する古いスタイルを上書き）
+   ここはファイル末尾に置き、他の stylesheet より優先されるようにします
+   ------------------------------ */
+
+/* Auth: remove any stubborn gray border coming from older styles */
+body .bg > .box,
+body .box {
+  border: none !important;
+  border-width: 0 !important;
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: 0 8px 18px rgba(107,59,138,0.03) !important;
+  background: rgba(255,255,255,0.99) !important;
+}
+
+body .bg > .box .box-inner,
+body .box-inner {
+  background: transparent !important;
+  padding: 14px 18px !important;
+  border: none !important;
+  border-width: 0 !important;
+  border-color: transparent !important;
+}
+
+/* Posts: ensure card padding and centered images survive other rules */
+.post-card .post-link {
+  padding: 16px !important;
+}
+
+.post-card .image-wrapper,
+.post-card .image-wrapper img {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Emergency override: force post-card padding and center images (highest priority) */
+.post-card, .post-card .post-link, .post-card .image-wrapper {
+  padding: 12px !important;
+  background: #ffffff !important;
+  border: none !important;
+  border-width: 0 !important;
+  border-color: transparent !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08) !important;
+}
+
+.post-card .post-link { background: #fff !important; }
+.post-card .image-wrapper img {
+  display: block !important;
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+}
+
+

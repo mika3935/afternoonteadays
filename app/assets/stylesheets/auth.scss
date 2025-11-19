@@ -1,0 +1,160 @@
+/* Cute auth styles: registration and login */
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #fff7fb 0%, #fffefc 100%);
+}
+
+.box {
+  width: 100%;
+  max-width: 420px; /* make the white form area smaller */
+  border-radius: 16px;
+  background: rgba(255,255,255,0.98);
+  /* remove any visible border and use a very soft colored shadow */
+  border: none !important;
+  box-shadow: 0 8px 20px rgba(107,59,138,0.035) !important;
+  padding: 12px;
+}
+
+/* Higher-specificity overrides to beat other styles (signup.scss etc.) */
+.bg > .box {
+  border: none !important;
+  box-shadow: 0 8px 20px rgba(107,59,138,0.035) !important;
+  background: rgba(255,255,255,0.98) !important;
+}
+
+.bg > .box .box-inner {
+  background: transparent !important;
+  padding: 12px 18px 6px !important; /* reduce bottom white space */
+}
+
+.box-inner {
+  padding: 12px 18px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 18px;
+  color: #6b3b8a;
+}
+
+.box-name,
+.box-email,
+.box-password {
+  margin-bottom: 14px;
+}
+
+.box label {
+  font-weight: 600;
+  color: #5a3a70;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.box input[type="text"],
+.box input[type="email"],
+.box input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(107,59,138,0.12);
+  background: #fff;
+  box-shadow: inset 0 2px 6px rgba(107,59,138,0.02);
+  font-size: 14px;
+  color: #333;
+}
+
+.box input:focus {
+  outline: none;
+  border-color: rgba(107,59,138,0.28);
+  box-shadow: 0 6px 18px rgba(107,59,138,0.08);
+}
+
+.box-login {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.box-login input[type="submit"],
+.box a.btn-auth {
+  background: linear-gradient(180deg,#8e5ec3,#6b3b8a);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(107,59,138,0.15);
+  text-decoration: none;
+}
+
+.box-login input[type="submit"]:hover,
+.box a.btn-auth:hover {
+  transform: translateY(-2px);
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6b3b8a;
+}
+
+.box-newusr {
+  text-align: center;
+    margin-top: 6px; /* reduce spacing under form */
+  color: #8b6aa8;
+}
+
+.box-newusr a {
+  display: inline-block;
+  margin-top: 8px;
+  background: #fff;
+  color: #6b3b8a;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(107,59,138,0.08);
+  text-decoration: none;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .box { padding: 10px; max-width: 320px; }
+  .box-inner { padding: 10px; }
+}
+
+/* Stronger overrides to ensure no gray border from older signup.scss */
+body .bg > .box {
+  border: none !important;
+  box-shadow: 0 8px 18px rgba(107,59,138,0.03) !important;
+  background: rgba(255,255,255,0.99) !important;
+}
+
+body .bg > .box .box-inner {
+  background: transparent !important;
+  padding: 14px 18px !important;
+}
+
+/* Extra: ensure any direct .box borders are hidden */
+body .box {
+  border: none !important;
+}
+
+/* Specific override for Devise auth pages (more specific than legacy signup.scss) */
+.auth-bg > .box {
+  border: none !important;
+  border-width: 0 !important;
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: 0 8px 18px rgba(107,59,138,0.03) !important;
+  background: rgba(255,255,255,0.99) !important;
+}
+
+.auth-bg > .box .box-inner {
+  padding-bottom: 6px !important;
+}
