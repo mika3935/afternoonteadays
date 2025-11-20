@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.2.9"
+ruby "3.2.2"
 
 # Rails 本体
 gem "rails", "~> 7.1.5", ">= 7.1.5.2"
