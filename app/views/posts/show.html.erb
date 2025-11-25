@@ -35,9 +35,7 @@
       <% if user_signed_in? && @post.user == current_user %>
         <div class="mt-4">
           <%= link_to '編集する', edit_post_path(@post), class: "btn btn-info mr-3" %>
-          <%= link_to '削除する', post_path(@post), 
-                data: { turbo_method: :delete, turbo_confirm: "本当に消しますか？" }, 
-                class: "btn btn-danger" %>
+          <%= button_to '削除する', post_path(@post), method: :delete, form: { data: { turbo_confirm: "本当に消しますか？" }, class: 'd-inline' }, class: "btn btn-danger" %>
         </div>
       <% end %>
 
