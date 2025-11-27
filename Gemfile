@@ -32,7 +32,6 @@ gem "bootsnap", require: false
 gem "devise"
 
 # --- ここから Refile 関連 ---
-gem "refile", github: "manfe/refile", branch: "master"
 gem "refile-mini_magick"
 gem "ffi"
 # --- ここまで Refile 関連 ---
