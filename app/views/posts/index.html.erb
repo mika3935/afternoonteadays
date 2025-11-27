@@ -23,8 +23,10 @@
 
             <!-- 画像ラッパー -->
             <div class="image-wrapper" style="display:flex;align-items:center;justify-content:center;padding:12px;background:linear-gradient(180deg,#ffffff,#fffdf8);border-radius:14px;overflow:hidden;">
-              <% if post.image.present? %>
-                <%= attachment_image_tag post, :image, format: 'jpeg', size: "180x180", class: 'post-thumb', style: 'display:block;margin:0 auto;max-width:100%;max-height:100%;object-fit:cover;' %>
+              <% if post.image.attached? %>
+                <%= image_tag post.image.variant(resize_to_fill: [180, 180]),
+                      class: 'post-thumb',
+                      style: 'display:block;margin:0 auto;max-width:100%;max-height:100%;object-fit:cover;' %>
               <% else %>
                 <div class="no-image"></div>
               <% end %>

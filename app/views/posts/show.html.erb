@@ -18,11 +18,14 @@
       <h4 class="mb-3"><strong>投稿者：</strong><%= @post.user.name %></h4>
 
       <!-- 画像 -->
-      <% if @post.image.present? %>
-        <div class="mb-4">
-          <%= attachment_image_tag @post, :image, format: 'jpeg', size: "300x300", class: "post-image rounded shadow", alt: (@post.try(:title) || @post.location || 'post image') %>
-        </div>
-      <% end %>
+<% if @post.image.attached? %>
+  <div class="mb-4">
+    <%= image_tag @post.image.variant(resize_to_fill: [300, 300]),
+          class: "post-image rounded shadow",
+          alt: (@post.try(:title) || @post.location || 'post image') %>
+  </div>
+<% end %>
+
 
       <!-- 投稿内容 -->
       <h5 class="mt-4 mb-2">場所</h5>

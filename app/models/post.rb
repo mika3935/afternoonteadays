@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
-  # Refileで画像を扱うための設定
-  attachment :image
+  # Active Storage
+  has_one_attached :image
+
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
@@ -11,7 +12,7 @@ class Post < ApplicationRecord
 
   enum status: { published: 0, draft: 1 }
 
-    def favorited_by?(user)
-      favorites.where(user_id: user.id).exists?
-    end
+  def favorited_by?(user)
+    favorites.where(user_id: user.id).exists?
+  end
 end

@@ -43,6 +43,8 @@ Rails.application.configure do
     protocol: "https"
   }
 
+  
+
   # ロケール設定
   config.i18n.fallbacks = true
 
