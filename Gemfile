@@ -72,5 +72,6 @@ gem 'enum_help'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
-gem "cloudinary"
-gem "activestorage-cloudinary-service"
+gem "refile", require: "refile/rails"
+gem "refile-cloudinary"
+gem "refile-mini_magick"
