@@ -23,7 +23,8 @@ Rails.application.configure do
   config.assets.compile = false
 
   # アップロードファイル保存先
-  config.active_storage.service = :local
+  config.active_storage.service = :cloudinary
+
 
   # HTTPSを強制（Renderでは推奨）
   config.force_ssl = true

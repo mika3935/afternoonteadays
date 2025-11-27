@@ -71,3 +71,6 @@ gem 'devise-i18n'
 gem 'enum_help'
 
 gem 'dotenv-rails', groups: [:development, :test]
+
+gem "cloudinary"
+gem "activestorage-cloudinary-service"
