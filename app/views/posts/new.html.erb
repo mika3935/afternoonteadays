@@ -14,7 +14,9 @@
     <% end %>
 
     <div class="row mt-5">
-      <%= form_with model: @post, local: true do |f| %>
+
+      <!-- ✅ フォームはこれ1つだけ -->
+      <%= form_with model: @post, url: confirm_posts_path, local: true do |f| %>
 
         <div class="form-group mb-3">
           <label class="form-label">【店名】</label>
@@ -38,7 +40,8 @@
                 { class: "custom-select w-25 mb-3" } %>
         </div>
 
-        <%= f.submit '投稿する', class: "btn btn-success" %>
+        <!-- ✅ ボタンは「確認画面へ」 -->
+        <%= f.submit '確認画面へ', class: "btn btn-success" %>
 
       <% end %>
     </div>

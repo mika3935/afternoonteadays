@@ -8,13 +8,14 @@ Rails.application.routes.draw do
     resource :relationships, only: [:create, :destroy]
   end
 
-  # 投稿用ルーティングを追加
   resources :posts do
     resources :comments, only: [:create, :destroy]
-    resource :favorites, only:[:create, :destroy]
+    resource :favorites, only: [:create, :destroy]
+
+    # ✅ confirm は POST だけ
     collection do
-    get 'confirm'
-  end
+      post :confirm
+    end
   end
 
   root to: "homes#top"
