@@ -191,4 +191,27 @@ body .box-inner {
   object-fit: cover !important;
 }
 
+/* ------------------------------
+   Users: 強制的なプロフィール画像サイズ（最終オーバーライド）
+   読み込み順や他ルールによる上書きを防ぐため `!important` を使用
+   ------------------------------ */
+.cover-user-show .profile-img {
+  width: 100px !important;
+  height: 100px !important;
+  max-width: 100px !important;
+  max-height: 100px !important;
+  object-fit: cover !important;
+  display: inline-block !important;
+}
+
+.cover-user-index .profile-img,
+.one-post .profile-img {
+  width: 50px !important;
+  height: 50px !important;
+  max-width: 50px !important;
+  max-height: 50px !important;
+  object-fit: cover !important;
+  display: inline-block !important;
+}
+
 

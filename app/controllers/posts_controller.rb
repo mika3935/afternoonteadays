@@ -36,6 +36,11 @@ class PostsController < ApplicationController
     @posts = @posts.where('location LIKE ?', "%#{params[:search]}%") if params[:search].present?
   end
 
+  # 下書き一覧
+  def drafts
+    @posts = current_user.posts.draft.page(params[:page]).reverse_order
+  end
+
   # 投稿詳細
   def show
     @comment = Comment.new

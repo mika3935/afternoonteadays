@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     # ✅ confirm は POST だけ
     collection do
       post :confirm
+      get :drafts
     end
   end
 
